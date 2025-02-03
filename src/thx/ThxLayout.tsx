@@ -5,6 +5,12 @@ import { thxSt } from "./style.css";
 import { appSt } from "../style.css.ts";
 
 export const ThxLayout = () => {
+  const clickSubmit = () => {
+    window.gtag("event", "4198_get_sub", {
+      variant_name: "ghk_4198_2",
+    });
+  };
+
   return (
     <>
       <div className={thxSt.container}>
@@ -28,13 +34,13 @@ export const ThxLayout = () => {
           лучший тариф. Вы – наш герой!
         </Typography.Text>
         <Typography.Text tag="p" view="primary-medium" defaultMargins={false}>
-          {`Оформить существующую подписку Альфа-Смарт вы можете на следующем
-          экране.`}
+          Оформить существующую подписку Альфа-Смарт вы можете на следующем
+          экране.
         </Typography.Text>
       </div>
 
       <div className={appSt.bottomBtn}>
-        <ButtonMobile block view="primary" href="">
+        <ButtonMobile block view="primary" href="" onClick={clickSubmit}>
           Оформить подписку
         </ButtonMobile>
       </div>
